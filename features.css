@@ -1,0 +1,147 @@
+/* ══════════════════════════════════════════
+   features.css — All new feature styles v2
+══════════════════════════════════════════ */
+
+/* ── COPILOT EXPLAINER ── */
+.copilot-explainer-card {
+  background: var(--bg-blue); border: 1.5px solid var(--border-blue);
+  border-radius: 14px; border-top-left-radius: 3px;
+  padding: 12px 14px; margin-bottom: 12px;
+}
+.copilot-why { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border-blue); }
+.why-label { font-size: 9px; font-weight: 800; color: var(--P-dd); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 4px; }
+.why-text { font-size: 11.5px; color: var(--t2); line-height: 1.5; font-weight: 500; }
+
+/* ── CONFIDENCE METER ── */
+.confidence-meter { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.conf-bar-bg { width: 64px; height: 4px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.conf-bar-fill { height: 100%; border-radius: 3px; transition: width 0.6s; }
+.conf-label { font-size: 8.5px; font-weight: 700; white-space: nowrap; }
+.confidence-high { color: var(--P); }
+
+/* ── RECEIPT MODAL ── */
+.receipt-header {
+  background: linear-gradient(140deg, var(--P) 0%, var(--P-navy) 100%);
+  border-radius: 14px; padding: 20px; text-align: center;
+  color: white; margin-bottom: 14px;
+}
+.receipt-body {
+  background: var(--bg); border-radius: 12px; padding: 4px 12px;
+  margin-bottom: 12px; border: 1px solid var(--border);
+}
+.receipt-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--border); }
+.receipt-row:last-child { border: none; }
+.receipt-lbl { font-size: 12px; color: var(--t3); font-weight: 500; flex-shrink: 0; }
+.receipt-val { font-size: 12px; font-weight: 700; color: var(--t1); text-align: right; max-width: 65%; word-break: break-all; }
+.merchant-thankyou { background: var(--bg-blue); border: 1px solid var(--border-blue); border-radius: 12px; padding: 12px; }
+
+/* ── ROAST BUTTON ── */
+.roast-btn {
+  width: 100%; padding: 16px; margin-bottom: 14px;
+  background: linear-gradient(135deg, #ff6b35, #ff3d3d);
+  color: white; border: none; border-radius: 14px;
+  font-size: 16px; font-weight: 800; cursor: pointer;
+  font-family: 'Inter', sans-serif; text-align: center;
+  box-shadow: 0 4px 16px rgba(255,60,60,0.35);
+  transition: transform 0.15s;
+}
+.roast-btn:hover { transform: scale(1.01); }
+.roast-btn:active { transform: scale(0.98); }
+
+/* ── BUDGET ── */
+.budget-alerts-box { margin-bottom: 12px; }
+.budget-alert-item { padding: 10px 12px; border-radius: 10px; margin-bottom: 6px; font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.budget-alert-item.over { background: var(--err-l); border: 1px solid var(--err); color: #B01018; }
+.budget-alert-item.near { background: var(--warn-l); border: 1px solid var(--warn); color: #9A5C00; }
+.budget-manager-card { background: var(--bg-card); border-radius: var(--r); padding: 14px; margin-bottom: 14px; box-shadow: var(--sh); border: 1px solid var(--border); }
+
+/* ── ANOMALY ── */
+.anomaly-card { background: var(--bg-blue); border: 1.5px solid var(--border-blue); border-radius: var(--r); padding: 13px; margin-bottom: 14px; }
+.anomaly-item { background: var(--bg-card); border-radius: 10px; padding: 10px; margin-top: 8px; font-size: 12.5px; color: var(--t1); line-height: 1.5; font-weight: 500; }
+
+/* ── DEAL STRIP ── */
+.deal-strip {
+  background: #EAF7EE; border: 1.5px solid var(--ok);
+  border-radius: var(--r); padding: 10px 13px; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.deal-icon { font-size: 22px; flex-shrink: 0; }
+
+/* ── CATEGORY PICKER ── */
+#categoryPicker { margin-bottom: 12px; }
+#categoryPicker button:hover { opacity: 0.85; }
+
+/* ── NIGHT SIM BUTTON ── */
+#nightSimBtn {
+  width: 100%; padding: 10px 14px; border-radius: 10px;
+  border: 1.5px solid var(--border); background: var(--bg);
+  color: var(--t2); font-size: 12px; font-weight: 700;
+  cursor: pointer; font-family: 'Inter', sans-serif;
+  transition: all 0.2s; text-align: center; margin-bottom: 8px;
+}
+
+/* ── ELDER MODE — PROPER STYLES ── */
+.elder-mode-banner {
+  background: linear-gradient(120deg, #7C3AED, #5B21B6);
+  color: white; font-size: 12px; font-weight: 700;
+  padding: 8px 14px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.elder-mode-banner button {
+  background: rgba(255,255,255,0.2); border: none; color: white;
+  font-size: 11px; padding: 4px 10px; border-radius: 20px;
+  cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 700;
+}
+
+/* Elder mode enlarges everything */
+#app.elder-mode { font-size: 120%; }
+#app.elder-mode .home-hi { font-size: 17px !important; }
+#app.elder-mode .home-upi { font-size: 13px !important; }
+#app.elder-mode .wc-amount { font-size: 34px !important; }
+#app.elder-mode .wc-label { font-size: 12px !important; }
+#app.elder-mode .wc-cashback { font-size: 13px !important; }
+#app.elder-mode .qa-item { font-size: 13px !important; padding: 6px 2px !important; }
+#app.elder-mode .qa-icon { width: 56px !important; height: 56px !important; }
+#app.elder-mode .qa-icon svg { width: 28px !important; height: 28px !important; }
+#app.elder-mode .screen-header { font-size: 20px !important; padding: 14px 16px 18px !important; }
+#app.elder-mode .sh-title { font-size: 16px !important; }
+#app.elder-mode .rem-card { padding: 16px !important; }
+#app.elder-mode .rem-name { font-size: 16px !important; }
+#app.elder-mode .rem-amt { font-size: 26px !important; }
+#app.elder-mode .rem-due { font-size: 13px !important; }
+#app.elder-mode .rem-pay-input { padding: 12px !important; font-size: 16px !important; }
+#app.elder-mode .rem-pay-btn { padding: 12px 18px !important; font-size: 15px !important; }
+#app.elder-mode .sf-field label { font-size: 13px !important; }
+#app.elder-mode .sf-field input { padding: 16px 14px !important; font-size: 17px !important; }
+#app.elder-mode .pay-btn-main { padding: 18px !important; font-size: 18px !important; }
+#app.elder-mode .cp-txt { font-size: 14px !important; line-height: 1.7 !important; }
+#app.elder-mode .txn-name { font-size: 15px !important; }
+#app.elder-mode .txn-note { font-size: 13px !important; }
+#app.elder-mode .txn-amt-val { font-size: 16px !important; }
+#app.elder-mode .bn-item { font-size: 12px !important; }
+#app.elder-mode .bn-item svg { width: 26px !important; height: 26px !important; }
+#app.elder-mode .back-btn, #app.elder-mode .icon-btn { width: 40px !important; height: 40px !important; }
+
+/* ── SETTINGS ── */
+.settings-screen { padding: 14px; flex: 1; background: var(--bg); }
+.settings-section { margin-bottom: 18px; }
+.settings-section-title { font-size: 11px; font-weight: 800; color: var(--t3); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; padding: 0 2px; }
+.settings-card { background: var(--bg-card); border-radius: var(--r); overflow: hidden; box-shadow: var(--sh); }
+.settings-row { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+.settings-row:last-child { border: none; }
+.settings-row-icon { font-size: 20px; flex-shrink: 0; }
+.settings-row-info { flex: 1; }
+.settings-row-title { font-size: 14px; font-weight: 600; color: var(--t1); }
+.settings-row-sub { font-size: 11px; color: var(--t3); font-weight: 500; margin-top: 1px; }
+.toggle-wrap { position: relative; width: 44px; height: 24px; flex-shrink: 0; }
+.toggle-wrap input { display: none; }
+.toggle-track { position: absolute; inset: 0; border-radius: 12px; background: var(--border); cursor: pointer; transition: background 0.2s; }
+.toggle-track::after { content: ''; position: absolute; width: 20px; height: 20px; border-radius: 50%; background: white; top: 2px; left: 2px; transition: transform 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+.toggle-wrap input:checked + .toggle-track { background: var(--P); }
+.toggle-wrap input:checked + .toggle-track::after { transform: translateX(20px); }
+.settings-input { width: 80px; padding: 6px 10px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 13px; font-weight: 700; color: var(--t1); background: var(--bg-inp); text-align: center; font-family: 'Inter', sans-serif; outline: none; }
+.settings-input:focus { border-color: var(--P); }
+
+/* ── HISTORY tap to view receipt ── */
+.txn-item { cursor: pointer; }
+.txn-item:hover { background: var(--bg-blue) !important; }
